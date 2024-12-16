@@ -23,6 +23,8 @@ public class InregistrareTest {
         driver = new ChromeDriver();
         driver.get("https://diva-charms.com/ro/");
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
         ElementMethods elementMethods=new ElementMethods(driver);
 
         HomePage homePage=new HomePage(driver);
@@ -38,21 +40,6 @@ public class InregistrareTest {
         WebElement creareContButton =driver.findElement(By.id("SubmitCreate"));
         elementMethods.clickJSElement(creareContButton);
 
-//        List<WebElement> genderOptionsList=driver.findElements(By.xpath("//input[@name='id_gender']"));
-//        String genderValue="Dna.";
-//        switch (genderValue) {
-//            case "Dl.":
-//                elementMethods.clickJSElement(genderOptionsList.get(0));
-//
-//               //js.executeScript("arguments[0].click();",genderOptionsList.get(0));
-//                break;
-//            case "Dna.":
-//                elementMethods.clickJSElement(genderOptionsList.get(1));
-//
-//                //js.executeScript("arguments[0].click();",genderOptionsList.get(1));
-//                break;
-//        }
-
         WebElement prenumeElement= driver.findElement(By.xpath("//input[@name='firstname']"));
        String prenumeValue="Cristina";
         elementMethods.fillElement(prenumeElement,prenumeValue);
@@ -62,7 +49,7 @@ public class InregistrareTest {
         elementMethods.fillElement(numeElement,numeValue);
 
         WebElement emailNouElement= driver.findElement(By.xpath("//div[@class='col-lg-12']//input[@name='email']"));
-        String emailNouValue="test1@gmail.com";
+        String emailNouValue="test123@gmail.com";
         elementMethods.fillElement(emailNouElement,emailNouValue);
 
         WebElement parolaNouaElement= driver.findElement(By.xpath("//input[@class='form-control js-child-focus js-visible-password']"));

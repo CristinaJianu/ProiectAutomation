@@ -18,6 +18,11 @@ public class ElementMethods {
         this.driver = driver;
     }
 
+    public void clickElement(WebElement element) {
+        waitVisibleElement(element);
+        element.click();
+    }
+
     public void clickJSElement(WebElement element) {
         waitVisibleElement(element);
         JavascriptExecutor js = (JavascriptExecutor) driver;

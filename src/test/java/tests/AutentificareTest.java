@@ -25,9 +25,10 @@ public class AutentificareTest {
         driver = new ChromeDriver();
         driver.get("https://diva-charms.com/ro/");
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         ElementMethods elementMethods = new ElementMethods(driver);
-        HomePage homePage = new HomePage(driver);
+        //HomePage homePage = new HomePage(driver);
 
         WebElement respingeCookies = driver.findElement(By.id("onesignal-slidedown-cancel-button"));
         elementMethods.clickJSElement((respingeCookies));
