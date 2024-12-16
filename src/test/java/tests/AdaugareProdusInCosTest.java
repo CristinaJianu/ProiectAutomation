@@ -26,7 +26,7 @@ public class AdaugareProdusInCosTest {
         ElementMethods elementMethods=new ElementMethods(driver);
 
         WebElement respingeCookies =driver.findElement(By.id("onesignal-slidedown-cancel-button"));
-        elementMethods.clickJSElement((respingeCookies));
+        elementMethods.clickJSElement(respingeCookies);
 
         WebElement accountButton=driver.findElement(By.xpath("//span[@class='header_v_align_m']"));
         elementMethods.clickJSElement(accountButton);
@@ -79,7 +79,7 @@ public class AdaugareProdusInCosTest {
         WebElement adaugaInCosButton= driver.findElement(By.xpath("//span[text()='Adauga in cos']"));
         elementMethods.clickJSElement(adaugaInCosButton);
 
-        WebElement finalizeazaComandaButton= driver.findElement(By.xpath("//div[@class='dropdown_box']//a[text()='Finalizeaza comanda']"));
+        WebElement finalizeazaComandaButton= driver.findElement(By.xpath("//div[@class='col-md-6']//a[text()='Finalizeaza comanda']"));
         elementMethods.clickJSElement(finalizeazaComandaButton);
 
         WebElement finalizeazaComandaFinalButton= driver.findElement(By.xpath("//div[@class='checkout cart-detailed-actions card-block']//a[text()='Finalizeaza comanda']"));

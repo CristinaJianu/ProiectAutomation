@@ -33,7 +33,7 @@ public class InregistrareTest {
         elementMethods.clickJSElement((respingeCookies));
 
         WebElement accountButton=driver.findElement(By.xpath("//span[@class='header_v_align_m']"));
-       elementMethods.clickJSElement(accountButton);
+        elementMethods.clickJSElement(accountButton);
 
         WebElement creareContButton =driver.findElement(By.id("SubmitCreate"));
         elementMethods.clickJSElement(creareContButton);
